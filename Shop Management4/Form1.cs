@@ -13,7 +13,6 @@ namespace Shop_Management4
         }
 
 
-        // Use for testing purposes, you can open the UserForm directly when the main form loads
         private void userNameToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenSingleChild(new UserForm());
