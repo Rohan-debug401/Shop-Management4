@@ -37,6 +37,7 @@
             this.addTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +57,8 @@
             // 
             this.loginToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.userLoginToolStripMenuItem,
-            this.loginToolStripMenuItem1});
+            this.loginToolStripMenuItem1,
+            this.profileToolStripMenuItem});
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
             this.loginToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.loginToolStripMenuItem.Text = "Login";
@@ -65,14 +67,14 @@
             // userLoginToolStripMenuItem
             // 
             this.userLoginToolStripMenuItem.Name = "userLoginToolStripMenuItem";
-            this.userLoginToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+            this.userLoginToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.userLoginToolStripMenuItem.Text = "User Login";
             this.userLoginToolStripMenuItem.Click += new System.EventHandler(this.userLoginToolStripMenuItem_Click);
             // 
             // loginToolStripMenuItem1
             // 
             this.loginToolStripMenuItem1.Name = "loginToolStripMenuItem1";
-            this.loginToolStripMenuItem1.Size = new System.Drawing.Size(162, 26);
+            this.loginToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.loginToolStripMenuItem1.Text = "Login";
             // 
             // registerToolStripMenuItem
@@ -114,6 +116,13 @@
             this.addProductToolStripMenuItem.Text = "Add Product";
             this.addProductToolStripMenuItem.Click += new System.EventHandler(this.addProductToolStripMenuItem_Click);
             // 
+            // profileToolStripMenuItem
+            // 
+            this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.profileToolStripMenuItem.Text = "Profile";
+            this.profileToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -142,6 +151,7 @@
         private System.Windows.Forms.ToolStripMenuItem addProductToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem userLoginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
     }
 }
 

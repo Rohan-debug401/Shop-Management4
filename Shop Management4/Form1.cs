@@ -12,7 +12,7 @@ namespace Shop_Management4
             this.IsMdiContainer = true;
         }
 
-
+        // ================= MENU ITEM CLICKS =================
         private void userNameToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenSingleChild(new UserForm());
@@ -41,7 +41,7 @@ namespace Shop_Management4
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
         }
-
+        // ==================================================
         private void OpenSingleChild(Form child)
         {
             foreach (Form f in this.MdiChildren)
@@ -53,9 +53,15 @@ namespace Shop_Management4
             child.Show();
         }
 
+        // ================= FORM LOAD =================
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void profileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenSingleChild(new ProfileForm());
         }
     }
 }

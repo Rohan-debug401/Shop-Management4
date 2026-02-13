@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Shop Management4/Form1.cs
+/Shop Management4/Form1.Designer.cs
+/Shop Management4/Form1.resx
