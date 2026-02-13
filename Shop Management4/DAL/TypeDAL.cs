@@ -3,8 +3,10 @@ using System.Data.SqlClient;
 
 namespace Shop_Management4.DAL
 {
+    
     public class TypeDAL : DbConnection
     {
+        // This method adds a new type to the database by calling the stored procedure "dbo.sp_Type_Insert" with the provided type name as a parameter.
         public void AddType(string TypeName)
         {
             using (SqlConnection con = GetConnection())
@@ -17,6 +19,8 @@ namespace Shop_Management4.DAL
             }
         }
 
+        // This method retrieves all types from the database by executing a SQL query that selects the TypeID
+        // and TypeName columns from the dbo.AddType table, and returns the results in a DataTable.
         public DataTable GetTypes()
         {
             DataTable dt = new DataTable();

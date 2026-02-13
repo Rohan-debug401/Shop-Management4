@@ -14,6 +14,7 @@ namespace Shop_Management4.UI
         public AddSize()
         {
             InitializeComponent();
+            this.Load += AddSize_Load;
         }
 
         // ================= FORM LOAD =================
@@ -27,31 +28,44 @@ namespace Shop_Management4.UI
         // ================= LOAD TYPES =================
         private void LoadTypes()
         {
-
             DataTable dt = typeService.GetTypes();
-            cmbbxtype.DataSource = dt;
+
+            cmbbxtype.DataSource = null;   // very important
             cmbbxtype.DisplayMember = "TypeName";
             cmbbxtype.ValueMember = "TypeID";
+            cmbbxtype.DataSource = dt;
             cmbbxtype.SelectedIndex = -1;
         }
+
+
+
+
+
+
+        // ================= TYPE CHANGED EVENT 
+        private void cmbbxtype_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbbxtype.SelectedIndex == -1)
+                return;
+
+            if (cmbbxtype.SelectedValue is int typeId)
+            {
+                LoadProducts(typeId);
+            }
+        }
+
+
 
         //================= LOAD PRODUCTS BY TYPE =================
         private void LoadProducts(int typeId)
         {
             DataTable dt = productService.GetProductsByType(typeId);
-            cmbbxproductname.DataSource = dt;
+
+            cmbbxproductname.DataSource = null;  // very important
             cmbbxproductname.DisplayMember = "ProductName";
             cmbbxproductname.ValueMember = "ProductID";
+            cmbbxproductname.DataSource = dt;
             cmbbxproductname.SelectedIndex = -1;
-        }
-
-        // ================= TYPE CHANGED EVENT =================
-        private void cmbbxtype_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbbxtype.SelectedValue != null && int.TryParse(cmbbxtype.SelectedValue.ToString(), out int typeId))
-            {
-                LoadProducts(typeId);
-            }
         }
 
 
@@ -65,6 +79,10 @@ namespace Shop_Management4.UI
                     MessageBox.Show("Please select Type and Product");
                     return;
                 }
+                // messagebox for debugging
+                MessageBox.Show("TypeID = " + cmbbxtype.SelectedValue +
+                 "\nProductID = " + cmbbxproductname.SelectedValue);
+
 
                 sizeService.AddSize(
                     Convert.ToInt32(cmbbxtype.SelectedValue),
@@ -74,7 +92,7 @@ namespace Shop_Management4.UI
                     Convert.ToInt32(txtbxquantity.Text),
                     Convert.ToDecimal(txtbxmrp.Text),
                     Convert.ToDecimal(txtbxrealprice.Text)
-                );
+                ); 
 
                 MessageBox.Show("Size added successfully ✔️");
                 ClearForm();

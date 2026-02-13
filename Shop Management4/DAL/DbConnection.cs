@@ -3,9 +3,12 @@ using System.Data.SqlClient;
 
 namespace Shop_Management4.DAL
 {
+    // This class is responsible for creating a connection to the database
     public class DbConnection
     {
         protected SqlConnection GetConnection()
+
+            // This method creates and returns a new SQL connection using the specified connection string
         {
             return new SqlConnection(@"Data Source=(local)\MSSQLSERVER01;Initial Catalog=Shop Management1;Integrated Security=True");
 

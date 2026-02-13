@@ -213,8 +213,7 @@
             this.Controls.Add(this.lblcolor);
             this.Controls.Add(this.lblproductname);
             this.Controls.Add(this.lbladdsize);
-            this.Name = "AddSize";
-           
+            this.Name = "AddSize";   
             this.ResumeLayout(false);
             this.PerformLayout();
 
