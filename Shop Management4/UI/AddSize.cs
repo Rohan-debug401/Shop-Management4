@@ -23,6 +23,7 @@ namespace Shop_Management4.UI
             cmbbxproductname.DataSource = null; // Start me product empty
         }
 
+
         // ================= LOAD TYPES =================
         private void LoadTypes()
         {
@@ -34,7 +35,7 @@ namespace Shop_Management4.UI
             cmbbxtype.SelectedIndex = -1;
         }
 
-        // ================= LOAD PRODUCTS BY TYPE =================
+        //================= LOAD PRODUCTS BY TYPE =================
         private void LoadProducts(int typeId)
         {
             DataTable dt = productService.GetProductsByType(typeId);
@@ -102,12 +103,5 @@ namespace Shop_Management4.UI
             txtbxrealprice.Clear();
             cmbbxtype.Focus();
         }
-
-
-
-
-        
-
-
     }
 }
