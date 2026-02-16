@@ -9,11 +9,11 @@ namespace Shop_Management4.BLL
 
         // ✅ EXISTING LOGIN METHOD
         public bool Login(
-            string userType,
-            string loginValue,
-            string password,
-            out string userName
-        )
+    string userType,
+    string loginValue,
+    string password,
+    out string userName
+)
         {
             userName = null;
 
@@ -26,6 +26,7 @@ namespace Shop_Management4.BLL
             }
             return false;
         }
+
 
         // ✅ ADD THIS METHOD FOR COMBOBOX
         public DataTable GetUserTypes()

@@ -51,6 +51,8 @@
     <Compile Include="BBL\LoginService.cs" />
     <Compile Include="BBL\ProductService.cs" />
     <Compile Include="BBL\TypeService.cs" />
+    <Compile Include="BBL\User.cs" />
+    <Compile Include="BBL\UserLoginService.cs" />
     <Compile Include="BBL\UserService.cs" />
     <Compile Include="DAL\AddSizeDAL.cs" />
     <Compile Include="DAL\DbConnection.cs" />
