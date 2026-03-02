@@ -53,6 +53,10 @@
     <Compile Include="BBL\ProductService.cs" />
     <Compile Include="BBL\TypeService.cs" />
     <Compile Include="BBL\User.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="BBL\UserLoginService.cs" />
+>>>>>>> 7590bc921d29aef6d2a721d8e234ce1ae1ce31cc
     <Compile Include="BBL\UserService.cs" />
     <Compile Include="DAL\AddSizeDAL.cs" />
     <Compile Include="DAL\DbConnection.cs" />
