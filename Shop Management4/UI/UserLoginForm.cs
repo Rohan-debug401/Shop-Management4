@@ -15,34 +15,40 @@ namespace Shop_Management4.UI
         }
         private void btnlogin_Click_1(object sender, EventArgs e)
         {
+            string userName;
+
+            bool success = service.Login(
+                cmbbxtype.Text,
+                txtbxemailusername.Text,
+                txtbxpassword.Text,
+                out userName
+            );
+
+            if (success)
             {
-                string userName;
+                MessageBox.Show("Welcome " + userName);
+                string userType = cmbbxtype.Text;
 
-                bool success = service.Login(
-                    cmbbxtype.Text,
-                    txtbxemailusername.Text,
-                    txtbxpassword.Text,
-                    out userName
-                );
+                Form parent = this.MdiParent;   // get Form1 (MDI container)
 
-                if (success)
+                if (userType == "Admin")
                 {
-                    MessageBox.Show("Welcome " + userName);
-
-                    // 🔑 Open new form inside same MDI parent
-                    OrderForm df = new OrderForm();
-                    df.MdiParent = this.MdiParent;
-                    df.Show();
-
-                    // ❌ Close login form
-                    this.Close();
+                    AdminForm adminform = new AdminForm(userName);
+                    adminform.MdiParent = parent;   // OPEN INSIDE FORM1
+                    adminform.Show();
                 }
-                else
+                else if (userType == "Customer")
                 {
-                    MessageBox.Show("Invalid login details");
+                    OrderForm of = new OrderForm(userName, "101", txtbxemailusername.Text);
+                    of.MdiParent = parent;          // OPEN INSIDE FORM1
+                    of.Show();
                 }
+
+                this.Close(); // close login form (better than Hide in MDI)
             }
         }
+
+
 
         private void UserLoginForm_Load(object sender, EventArgs e)
         {

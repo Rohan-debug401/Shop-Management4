@@ -26,8 +26,7 @@ namespace Shop_Management4.DAL
             DataTable dt = new DataTable();
             using (SqlConnection con = GetConnection())
             {
-                SqlDataAdapter da = new SqlDataAdapter(
-                    "SELECT TypeID, TypeName FROM dbo.AddType", con
+                SqlDataAdapter da = new SqlDataAdapter(  "SELECT TypeID, TypeName FROM dbo.AddType", con
                 );
                 da.Fill(dt);
             }

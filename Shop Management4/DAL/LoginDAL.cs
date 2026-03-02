@@ -12,9 +12,14 @@ namespace Shop_Management4.DAL
             using (SqlCommand cmd = new SqlCommand("sp_User_Insert", con))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
+
                 cmd.Parameters.AddWithValue("@UserType", userType);
                 cmd.Parameters.AddWithValue("@LoginValue", loginValue);
                 cmd.Parameters.AddWithValue("@Password", password);
+
+                // 🔥 VERY IMPORTANT
+                cmd.Parameters.AddWithValue("@Action", "LOGIN");
+
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
             }

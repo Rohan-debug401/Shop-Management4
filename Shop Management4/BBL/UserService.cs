@@ -11,7 +11,7 @@ namespace Shop_Management4.BBL
     {
         UserDAL dal = new UserDAL();
 
-        public void RegisterUser(string UserType, string Name, string Email, string Gender, string State, string Password)
+        public void RegisterUser(string UserType, string Name, string Email, string Gender, string Country, string State, string City, string Password)
         {
             if (string.IsNullOrWhiteSpace(Name))
             {
@@ -28,7 +28,7 @@ namespace Shop_Management4.BBL
                 throw new Exception("Gender is required");
             }
 
-            dal.User(UserType, Name, Email, Gender, State, Password);
+            dal.User(UserType, Name, Email, Gender, Country, State, City, Password);
         }
     }
 }

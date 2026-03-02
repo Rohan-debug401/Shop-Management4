@@ -52,5 +52,31 @@ namespace Shop_Management4.DAL
 
             return dt;
         }
+
+        // Get product details by ID (you can expand this method to include more details as needed)
+        public DataTable GetProductDetails(int productId)
+        {
+            DataTable dt = new DataTable();
+
+            using (SqlConnection con = GetConnection())
+            using (SqlCommand cmd = new SqlCommand("sp_Product_Insert", con))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                // IMPORTANT: add ALL parameters in same order as SP
+
+                cmd.Parameters.Add("@ProductName", SqlDbType.NVarChar, 70).Value = DBNull.Value;
+                cmd.Parameters.Add("@TypeID", SqlDbType.Int).Value = DBNull.Value;
+                cmd.Parameters.Add("@ProductID", SqlDbType.Int).Value = productId;
+                cmd.Parameters.Add("@Action", SqlDbType.NVarChar, 20).Value = "GETDETAILS";
+
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(dt);
+                }
+            }
+            return dt;
+        }
+
     }
 }

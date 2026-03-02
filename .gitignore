@@ -364,3 +364,6 @@ FodyWeavers.xsd
 /Shop Management4/Form1.cs
 /Shop Management4/Form1.Designer.cs
 /Shop Management4/Form1.resx
+/Shop Management4/BBL/LoginService.cs
+/Shop Management4/BBL/UserLoginService.cs
+/Shop Management4/BBL/UserLoginService.cs

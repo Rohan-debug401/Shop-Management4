@@ -38,6 +38,10 @@
             this.rbbtnmale = new System.Windows.Forms.RadioButton();
             this.rbbtnfemale = new System.Windows.Forms.RadioButton();
             this.lbltypes = new System.Windows.Forms.Label();
+            this.lblcountry = new System.Windows.Forms.Label();
+            this.cmbbxcountry = new System.Windows.Forms.ComboBox();
+            this.lblcity = new System.Windows.Forms.Label();
+            this.cmbbxcity = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblregistrationform
@@ -79,7 +83,7 @@
             // lblstate
             // 
             this.lblstate.AutoSize = true;
-            this.lblstate.Location = new System.Drawing.Point(137, 271);
+            this.lblstate.Location = new System.Drawing.Point(137, 310);
             this.lblstate.Name = "lblstate";
             this.lblstate.Size = new System.Drawing.Size(38, 16);
             this.lblstate.TabIndex = 5;
@@ -88,7 +92,7 @@
             // lblpassword
             // 
             this.lblpassword.AutoSize = true;
-            this.lblpassword.Location = new System.Drawing.Point(137, 330);
+            this.lblpassword.Location = new System.Drawing.Point(137, 418);
             this.lblpassword.Name = "lblpassword";
             this.lblpassword.Size = new System.Drawing.Size(67, 16);
             this.lblpassword.TabIndex = 6;
@@ -109,14 +113,46 @@
             // cmbbxstate
             // 
             this.cmbbxstate.FormattingEnabled = true;
-            this.cmbbxstate.Location = new System.Drawing.Point(308, 271);
+            this.cmbbxstate.Items.AddRange(new object[] {
+            "",
+            "Andhra Pradesh",
+            "Arunachal Pradesh",
+            "Assam",
+            "Bihar",
+            "Chhattisgarh",
+            "Goa",
+            "Gujarat",
+            "Haryana",
+            "Himachal ",
+            "Pradesh",
+            "Jharkhand",
+            "Karnataka",
+            "Kerala",
+            "Madhya Pradesh",
+            "Maharashtra",
+            "Manipur",
+            "Meghalaya",
+            "Mizoram",
+            "Nagaland",
+            "Odisha",
+            "Punjab",
+            "Rajasthan",
+            "Sikkim",
+            "Tamil ",
+            "Nadu",
+            "Telangana",
+            "Tripura",
+            "Uttar Pradesh",
+            "Uttarakhand",
+            "West Bengal"});
+            this.cmbbxstate.Location = new System.Drawing.Point(308, 310);
             this.cmbbxstate.Name = "cmbbxstate";
             this.cmbbxstate.Size = new System.Drawing.Size(211, 24);
             this.cmbbxstate.TabIndex = 8;
             // 
             // txtbxpassword
             // 
-            this.txtbxpassword.Location = new System.Drawing.Point(308, 323);
+            this.txtbxpassword.Location = new System.Drawing.Point(308, 411);
             this.txtbxpassword.Name = "txtbxpassword";
             this.txtbxpassword.Size = new System.Drawing.Size(211, 22);
             this.txtbxpassword.TabIndex = 9;
@@ -137,9 +173,9 @@
             // 
             // btnregister
             // 
-            this.btnregister.Location = new System.Drawing.Point(277, 386);
+            this.btnregister.Location = new System.Drawing.Point(270, 474);
             this.btnregister.Name = "btnregister";
-            this.btnregister.Size = new System.Drawing.Size(128, 23);
+            this.btnregister.Size = new System.Drawing.Size(114, 23);
             this.btnregister.TabIndex = 12;
             this.btnregister.Text = "Register";
             this.btnregister.UseVisualStyleBackColor = true;
@@ -147,12 +183,13 @@
             // 
             // btnclear
             // 
-            this.btnclear.Location = new System.Drawing.Point(465, 386);
+            this.btnclear.Location = new System.Drawing.Point(465, 474);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(75, 23);
             this.btnclear.TabIndex = 13;
             this.btnclear.Text = "Clear";
             this.btnclear.UseVisualStyleBackColor = true;
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
             // rbbtnmale
             // 
@@ -185,11 +222,71 @@
             this.lbltypes.TabIndex = 16;
             this.lbltypes.Text = "Type";
             // 
+            // lblcountry
+            // 
+            this.lblcountry.AutoSize = true;
+            this.lblcountry.Location = new System.Drawing.Point(137, 258);
+            this.lblcountry.Name = "lblcountry";
+            this.lblcountry.Size = new System.Drawing.Size(52, 16);
+            this.lblcountry.TabIndex = 17;
+            this.lblcountry.Text = "Country";
+            // 
+            // cmbbxcountry
+            // 
+            this.cmbbxcountry.FormattingEnabled = true;
+            this.cmbbxcountry.Items.AddRange(new object[] {
+            "",
+            "India",
+            "United States",
+            "United Kingdom",
+            "Canada",
+            "Australia",
+            "Germany",
+            "France",
+            "Italy",
+            "Spain",
+            "Japan",
+            "China",
+            "Brazil",
+            "Russia",
+            "South Africa",
+            "Mexico",
+            "Singapore",
+            "United Arab Emirates",
+            "Saudi Arabia",
+            "Nepal",
+            "Sri Lanka"});
+            this.cmbbxcountry.Location = new System.Drawing.Point(308, 255);
+            this.cmbbxcountry.Name = "cmbbxcountry";
+            this.cmbbxcountry.Size = new System.Drawing.Size(211, 24);
+            this.cmbbxcountry.TabIndex = 18;
+            // 
+            // lblcity
+            // 
+            this.lblcity.AutoSize = true;
+            this.lblcity.Location = new System.Drawing.Point(140, 361);
+            this.lblcity.Name = "lblcity";
+            this.lblcity.Size = new System.Drawing.Size(29, 16);
+            this.lblcity.TabIndex = 19;
+            this.lblcity.Text = "City";
+            // 
+            // cmbbxcity
+            // 
+            this.cmbbxcity.FormattingEnabled = true;
+            this.cmbbxcity.Location = new System.Drawing.Point(308, 361);
+            this.cmbbxcity.Name = "cmbbxcity";
+            this.cmbbxcity.Size = new System.Drawing.Size(211, 24);
+            this.cmbbxcity.TabIndex = 20;
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(767, 460);
+            this.ClientSize = new System.Drawing.Size(783, 545);
+            this.Controls.Add(this.cmbbxcity);
+            this.Controls.Add(this.lblcity);
+            this.Controls.Add(this.cmbbxcountry);
+            this.Controls.Add(this.lblcountry);
             this.Controls.Add(this.lbltypes);
             this.Controls.Add(this.rbbtnfemale);
             this.Controls.Add(this.rbbtnmale);
@@ -232,5 +329,9 @@
         private System.Windows.Forms.RadioButton rbbtnmale;
         private System.Windows.Forms.RadioButton rbbtnfemale;
         private System.Windows.Forms.Label lbltypes;
+        private System.Windows.Forms.Label lblcountry;
+        private System.Windows.Forms.ComboBox cmbbxcountry;
+        private System.Windows.Forms.Label lblcity;
+        private System.Windows.Forms.ComboBox cmbbxcity;
     }
 }

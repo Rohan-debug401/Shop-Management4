@@ -32,9 +32,10 @@ namespace Shop_Management4.UI
             cmbbxtype.ValueMember = "TypeID";
             cmbbxtype.SelectedIndex = -1;
         }
-        //==============================================================================
-        // Add Product Button Click Event
-        private void btnaddproduct_Click(object sender, EventArgs e)
+
+
+        // btnaddproduct Click Event - Validates input and adds new product
+        private void btnaddproduct_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -60,11 +61,5 @@ namespace Shop_Management4.UI
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-
-        private void btnaddproduct_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
-    //====================================================================================
 }

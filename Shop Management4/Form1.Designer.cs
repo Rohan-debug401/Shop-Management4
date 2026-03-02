@@ -32,12 +32,12 @@
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userLoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,15 +67,22 @@
             // userLoginToolStripMenuItem
             // 
             this.userLoginToolStripMenuItem.Name = "userLoginToolStripMenuItem";
-            this.userLoginToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.userLoginToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.userLoginToolStripMenuItem.Text = "User Login";
             this.userLoginToolStripMenuItem.Click += new System.EventHandler(this.userLoginToolStripMenuItem_Click);
             // 
             // loginToolStripMenuItem1
             // 
             this.loginToolStripMenuItem1.Name = "loginToolStripMenuItem1";
-            this.loginToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.loginToolStripMenuItem1.Size = new System.Drawing.Size(162, 26);
             this.loginToolStripMenuItem1.Text = "Login";
+            // 
+            // profileToolStripMenuItem
+            // 
+            this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+            this.profileToolStripMenuItem.Text = "Profile";
+            this.profileToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
             // 
             // registerToolStripMenuItem
             // 
@@ -91,37 +98,30 @@
             // userNameToolStripMenuItem
             // 
             this.userNameToolStripMenuItem.Name = "userNameToolStripMenuItem";
-            this.userNameToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.userNameToolStripMenuItem.Text = "User Name";
+            this.userNameToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.userNameToolStripMenuItem.Text = "User  Registration";
             this.userNameToolStripMenuItem.Click += new System.EventHandler(this.userNameToolStripMenuItem_Click);
             // 
             // addTypeToolStripMenuItem
             // 
             this.addTypeToolStripMenuItem.Name = "addTypeToolStripMenuItem";
-            this.addTypeToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.addTypeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.addTypeToolStripMenuItem.Text = "Add Type";
             this.addTypeToolStripMenuItem.Click += new System.EventHandler(this.addTypeToolStripMenuItem_Click);
             // 
             // addSizeToolStripMenuItem
             // 
             this.addSizeToolStripMenuItem.Name = "addSizeToolStripMenuItem";
-            this.addSizeToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.addSizeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.addSizeToolStripMenuItem.Text = "Add Size";
             this.addSizeToolStripMenuItem.Click += new System.EventHandler(this.addSizeToolStripMenuItem_Click);
             // 
             // addProductToolStripMenuItem
             // 
             this.addProductToolStripMenuItem.Name = "addProductToolStripMenuItem";
-            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.addProductToolStripMenuItem.Text = "Add Product";
             this.addProductToolStripMenuItem.Click += new System.EventHandler(this.addProductToolStripMenuItem_Click);
-            // 
-            // profileToolStripMenuItem
-            // 
-            this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            this.profileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.profileToolStripMenuItem.Text = "Profile";
-            this.profileToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
             // 
             // Form1
             // 

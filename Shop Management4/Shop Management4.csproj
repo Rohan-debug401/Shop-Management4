@@ -49,12 +49,15 @@
   <ItemGroup>
     <Compile Include="BBL\AddSizeService.cs" />
     <Compile Include="BBL\LoginService.cs" />
+    <Compile Include="BBL\OrderService.cs" />
     <Compile Include="BBL\ProductService.cs" />
     <Compile Include="BBL\TypeService.cs" />
+    <Compile Include="BBL\User.cs" />
     <Compile Include="BBL\UserService.cs" />
     <Compile Include="DAL\AddSizeDAL.cs" />
     <Compile Include="DAL\DbConnection.cs" />
     <Compile Include="DAL\LoginDAL.cs" />
+    <Compile Include="DAL\OrderDAL.cs" />
     <Compile Include="DAL\ProductDAL.cs" />
     <Compile Include="DAL\TypeDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
@@ -83,6 +86,12 @@
     </Compile>
     <Compile Include="UI\AddTypeForm.Designer.cs">
       <DependentUpon>AddTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\OrderForm.cs">
       <SubType>Form</SubType>
@@ -128,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\AddTypeForm.resx">
       <DependentUpon>AddTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>

@@ -121,5 +121,6 @@ namespace Shop_Management4.UI
             txtbxrealprice.Clear();
             cmbbxtype.Focus();
         }
+
     }
 }

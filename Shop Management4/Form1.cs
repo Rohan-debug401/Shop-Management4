@@ -38,6 +38,7 @@ namespace Shop_Management4
             OpenSingleChild(new UserLoginForm());
         }
 
+        
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
         }

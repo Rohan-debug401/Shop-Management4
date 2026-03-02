@@ -1,6 +1,7 @@
 ﻿using Shop_Management4.DAL;
 using System;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Shop_Management4.BLL
 {
@@ -23,10 +24,17 @@ namespace Shop_Management4.BLL
             dal.AddProduct(productName.Trim(), typeId);
         }
 
+        // Get product info by ID (you can expand this method to include more details as needed)
+        public DataTable GetProductDetails(int productId)
+        {
+            return dal.GetProductDetails(productId);
+        }
+
+
         // ===========================
         // GET PRODUCTS BY TYPE
         // ===========================
-        public DataTable GetProductsByType(int? typeId = null)
+        public DataTable GetProductsByType(int? typeId = null )
         {
             return dal.GetProductsByType(typeId);
         }

@@ -86,6 +86,7 @@
             this.cmbbxproductname.Name = "cmbbxproductname";
             this.cmbbxproductname.Size = new System.Drawing.Size(236, 24);
             this.cmbbxproductname.TabIndex = 3;
+            this.cmbbxproductname.SelectedIndexChanged += new System.EventHandler(this.cmbbxproductname_SelectedIndexChanged);
             // 
             // lbltype
             // 
@@ -123,21 +124,23 @@
             // 
             // btnaddtocart
             // 
-            this.btnaddtocart.Location = new System.Drawing.Point(447, 204);
+            this.btnaddtocart.Location = new System.Drawing.Point(465, 202);
             this.btnaddtocart.Name = "btnaddtocart";
             this.btnaddtocart.Size = new System.Drawing.Size(100, 26);
             this.btnaddtocart.TabIndex = 8;
             this.btnaddtocart.Text = "Add To Cart";
             this.btnaddtocart.UseVisualStyleBackColor = true;
+            this.btnaddtocart.Click += new System.EventHandler(this.btnaddtocart_Click);
             // 
             // btnremovefromcart
             // 
-            this.btnremovefromcart.Location = new System.Drawing.Point(437, 268);
+            this.btnremovefromcart.Location = new System.Drawing.Point(454, 264);
             this.btnremovefromcart.Name = "btnremovefromcart";
             this.btnremovefromcart.Size = new System.Drawing.Size(128, 25);
             this.btnremovefromcart.TabIndex = 9;
             this.btnremovefromcart.Text = "Remove from Cart";
             this.btnremovefromcart.UseVisualStyleBackColor = true;
+            this.btnremovefromcart.Click += new System.EventHandler(this.btnremovefromcart_Click);
             // 
             // lblname
             // 
@@ -170,7 +173,7 @@
             // lblemails
             // 
             this.lblemails.AutoSize = true;
-            this.lblemails.Location = new System.Drawing.Point(758, 119);
+            this.lblemails.Location = new System.Drawing.Point(693, 119);
             this.lblemails.Name = "lblemails";
             this.lblemails.Size = new System.Drawing.Size(48, 16);
             this.lblemails.TabIndex = 15;
@@ -179,7 +182,7 @@
             // lbluserids
             // 
             this.lbluserids.AutoSize = true;
-            this.lbluserids.Location = new System.Drawing.Point(755, 79);
+            this.lbluserids.Location = new System.Drawing.Point(693, 79);
             this.lbluserids.Name = "lbluserids";
             this.lbluserids.Size = new System.Drawing.Size(49, 16);
             this.lbluserids.TabIndex = 14;
@@ -188,7 +191,7 @@
             // lblnames
             // 
             this.lblnames.AutoSize = true;
-            this.lblnames.Location = new System.Drawing.Point(755, 34);
+            this.lblnames.Location = new System.Drawing.Point(693, 34);
             this.lblnames.Name = "lblnames";
             this.lblnames.Size = new System.Drawing.Size(51, 16);
             this.lblnames.TabIndex = 13;
@@ -202,6 +205,7 @@
             this.btntotal.TabIndex = 16;
             this.btntotal.Text = "Total";
             this.btntotal.UseVisualStyleBackColor = true;
+            this.btntotal.Click += new System.EventHandler(this.btntotal_Click);
             // 
             // txtbxtotal
             // 
@@ -218,16 +222,18 @@
             this.btnoderconfirm.TabIndex = 18;
             this.btnoderconfirm.Text = "Oder Confirm";
             this.btnoderconfirm.UseVisualStyleBackColor = true;
+            this.btnoderconfirm.Click += new System.EventHandler(this.btnoderconfirm_Click);
             // 
             // dgvorder
             // 
             this.dgvorder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvorder.Location = new System.Drawing.Point(152, 179);
+            this.dgvorder.Location = new System.Drawing.Point(12, 179);
             this.dgvorder.Name = "dgvorder";
             this.dgvorder.RowHeadersWidth = 51;
             this.dgvorder.RowTemplate.Height = 24;
-            this.dgvorder.Size = new System.Drawing.Size(236, 150);
+            this.dgvorder.Size = new System.Drawing.Size(419, 150);
             this.dgvorder.TabIndex = 19;
+            this.dgvorder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvorder_CellContentClick);
             // 
             // lvorder
             // 
